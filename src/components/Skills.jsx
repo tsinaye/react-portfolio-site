@@ -3,6 +3,7 @@ import { requestStates } from '../constants';
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useSkills } from '../customHooks/useSkills';
+import { useReducer } from 'react';
 
 
 export const Skills = () => {
