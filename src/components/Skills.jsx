@@ -1,6 +1,4 @@
-import { useEffect, useReducer } from 'react';
-import axios from 'axios';
-import { skillReducer, initialState, actionTypes } from '../reducers/skillReducer';
+import { skillReducer, initialState } from '../reducers/skillReducer';
 import { requestStates } from '../constants';
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -9,7 +7,7 @@ import { useSkills } from '../customHooks/useSkills';
 
 export const Skills = () => {
 
-  const [sortedLanguageList, fetchRequestState, converseCountToPercentage] = useSkills();
+  const [sortedLanguageList, fetchRequestState] = useSkills();
   const convertCountToPercentage = (count) => {
     if (count > 10) { return 100; }
     return count * 10;
